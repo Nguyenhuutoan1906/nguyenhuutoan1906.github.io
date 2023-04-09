@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.15;
+    background-color: #ffbf00;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+}
+  
+.icon-bar a {
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 36px;
+}
+  
+.icon-bar a:hover {
+    background-color: #ffbf00;
+    color: white;
+}
+
+
+/* --------------------- */
+
+#wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.headline {
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.tieude {
+    font-size: 18px;
+    color: #111;
+    padding: 10px 20px;
+    border-bottom: 1px dashed black;
+    display: inline-block;
+}
+
+ul.products{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul.products li{
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+ul.products li img {
+    max-width: 100%;
+    height: auto;
+    border: 1px dashed black;
+    border-radius: 20px;
+}
