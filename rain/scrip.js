@@ -1,5 +1,5 @@
 function randomText(){
-    var text = ("qwyuasdhkjquhwuieahsjdgahbvcmnab09485893");
+    var text = ("♥♡");
     letter = text[Math.floor(Math.random() * text.length)];
     return letter;
 }

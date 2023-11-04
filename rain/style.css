@@ -30,10 +30,10 @@ body{
     top: 50px;
     width: 320px;
     height: 100px;
-    background: aqua;
+    background: #f31ab9;
     border-radius: 100px;
     z-index: 100;
-    filter: drop-shadow(0 0 35px aqua);
+    filter: drop-shadow(0 0 35px #f31ab9);
 }
 
 .cloud::before{
@@ -44,8 +44,8 @@ body{
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: aqua;
-    box-shadow: 90px 0 0 30px aqua;
+    background: #f31ab9;
+    box-shadow: 90px 0 0 30px #f31ab9;
 }
 
 .text{
@@ -54,10 +54,10 @@ body{
     height: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    color: aqua;
-    text-shadow: 0 0 5px aqua,
-    0 0 15px aqua,
-    0 0 30px aqua;
+    color: #f31ab9;
+    text-shadow: 0 0 5px #f31ab9,
+    0 0 15px #f31ab9,
+    0 0 30px #f31ab9;
     transform-origin: bottom;
     animation: animate 2s linear forwards;
 }
