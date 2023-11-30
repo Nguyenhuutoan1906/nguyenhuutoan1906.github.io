@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ăn Là Ghiền</title>
+   <link rel="icon" href="images/logodaonia.png">
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<header class="header">
+
+   <section class="flex">
+
+      <a href="home.html" class="logo">Ăn Là Ghiền 😍</a>
+
+      <nav class="navbar">
+         <a href="home.html">nhà</a>
+         <a href="about.html">giới thiệu</a>
+         <a href="menu.html">menu</a>
+         <a href="orders.html">đơn đặt hàng</a>
+         <a href="contact.html">liên hệ</a>
+      </nav>
+
+      <div class="icons">
+         <a href="search.html"><i class="fas fa-search"></i></a>
+         <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+
+      <div class="profile">
+         <p class="name">Nguyễn Hữu Toàn</p>
+         <div class="flex">
+            <a href="profile.html" class="btn">Hồ sơ</a>
+            <a href="#" class="delete-btn">Thoát</a>
+         </div>
+         <p class="account"><a href="login.html">đăng nhập</a> hoặc <a href="register.html">đăng ký</a></p>
+      </div>
+
+   </section>
+
+</header>
+
+<div class="heading">
+   <h3>thủ tục thanh toán</h3>
+   <p><a href="home.html">nhà </a> <span> / thanh toán</span></p>
+</div>
+
+<section class="checkout">
+
+   <h1 class="title">hóa đơn</h1>
+
+   <form action="" method="post">
+      <div class="cart-items">
+         <h3>giỏ hàng</h3>
+         <p><span class="name">pizza rau củ</span><span class="price">93.000 VNĐ</span></p>
+         <p><span class="name">mì xào</span><span class="price">97.000 VNĐ</span></p>
+         <p><span class="name">kem dâu</span><span class="price">53.000 VNĐ</span></p>
+         <p class="grand-total"><span class="name">tổng cộng :</span> <span class="price">243.000 VNĐ</span></p>
+         <a href="cart.html" class="btn">chi tiết</a>
+      </div>
+      <div class="user-info">
+         <h3>thông tin</h3>
+         <p><i class="fas fa-user"></i> <span>Nguyễn Hữu Toàn</span></p>
+         <p><i class="fas fa-phone"></i> <span>0522669999</span></p>
+         <p><i class="fas fa-envelope"></i> <span>nguyenhuutoan1906@gmail.com</span></p>
+         <a href="update_profile.html" class="btn">cập nhật thông tin</a>
+         <h3>địa chỉ</h3>
+         <p class="address"><i class="fas fa-map-marker-alt"></i> <span>Vĩnh Ngọc, Nha Trang, Khánh Hòa</span></p>
+         <a href="update_address.html" class="btn">cập nhật địa chỉ giao hàng</a>
+         <select name="method" class="box" required>
+            <option value="" disabled selected>chọn phương thức thanh toán</option>
+            <option value="momo">momo</option>
+            <option value="ngân hàng nội địa">ngân hàng nội địa</option>
+            <option value="visa">visa</option>
+            <option value="VNpay">VNpay</option>
+            <option value="thanh toán khi nhận hàng">thanh toán khi nhận hàng</option>
+         </select>
+      </div>
+      <input type="submit" value="đặt hàng" name="order" class="btn order-btn">
+   </form>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   <section class="box-container">
+
+      <div class="box">
+         <img src="images/email-icon.png" alt="">
+         <h3>Mail</h3>
+         <a href="mailto:anlaghien@gmail.com">anlaghien@gmail.com</a>
+      </div>
+
+      <div class="box">
+         <img src="images/clock-icon.png" alt="">
+         <h3>Thời gian mở cửa</h3>
+         <p>08:00 - 22:00 </p>
+      </div>
+
+      <div class="box">
+         <img src="images/map-icon.png" alt="">
+         <h3>Địa chỉ</h3>
+         <a href="https://maps.app.goo.gl/nWrwFZtgyCecs5hc7">Vincom Plaza | 78-80 Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam</a>
+      </div>
+
+      <div class="box">
+         <img src="images/phone-icon.png" alt="">
+         <h3>Số điện thoại</h3>
+         <a href="tel:0394677777">+84 394677777</a>
+      </div>
+
+   </section>
+
+   <div class="credit">&copy; 2023 <span>J-Yon</span> | Đã đăng ký Bản quyền!</div>
+
+</footer>
+
+<div class="loader">
+   <img src="images/loader.gif" alt="">
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
