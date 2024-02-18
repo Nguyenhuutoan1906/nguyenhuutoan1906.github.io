@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url(background_trai_tim.png) no-repeat;
+}
+
+#container {
+    text-align: center;
+}
+
+section {
+    display: none;
+    width: 100%;
+}
+
+p {
+    font-size: 30px;
+}
+
+#showButton {
+    border: solid white;
+    color: red;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#showButton:hover {
+    border: solid red;
+    background: red;
+    color: white;
+}
+
+a {
+    padding: 10px 20px;
+    border: solid none;
+    background: white;
+    border-radius: 50px;
+    color: red;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a:hover {
+    background: red;
+    color: white;
+}
