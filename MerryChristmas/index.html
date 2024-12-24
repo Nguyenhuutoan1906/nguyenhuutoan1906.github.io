@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigation">
+            <a href="#home">Trang Chủ<span></span></a>
+            <a href="#wish">Lời Chúc<span></span></a>
+        </nav>
+    </header>
+
+    <!-- Section cho Trang Chủ -->
+    <section id="home">
+        <div class="text">
+            <h1>Merry<br>Christmas</h1>
+        </div>
+    </section>
+
+    <!-- Section cho Lời Chúc -->
+    <section id="wish">
+        <div class="message">
+            <h2>
+Giáng Sinh đến rồi, mang theo không khí ấm áp, tình yêu thương và những niềm vui rộn ràng. Mong rằng mùa lễ này sẽ mang lại cho bạn và gia đình một không gian ngập tràn tiếng cười, sự an lành và hạnh phúc. Chúc bạn một mùa Giáng Sinh an vui, những điều ước tốt đẹp thành hiện thực, và một năm mới đầy may mắn, sức khỏe và thành công.
+
+Hãy luôn giữ trong tim những khoảnh khắc ngọt ngào và tình yêu thương, để mỗi ngày trong năm đều như một ngày Giáng Sinh tuyệt vời!
+
+Chúc bạn một mùa lễ an lành và đầy ý nghĩa! 🎄✨
+
+
+            </h2>
+        </div>
+    </section>
+
+    <script>
+        let idleTime = 0; // Biến lưu trữ thời gian không thao tác
+        const sections = ["#home", "#wish"]; // Các section cần chuyển đổi
+        let currentSection = 0; // Biến theo dõi section hiện tại
+    
+        // Hàm reset thời gian idle khi người dùng thao tác
+        function resetIdleTime() {
+            idleTime = 0;
+        }
+    
+        // Hàm chuyển sang section tiếp theo
+        function goToNextSection() {
+            currentSection = (currentSection + 1) % sections.length; // Tăng index và vòng lại khi hết array
+            window.location.hash = sections[currentSection]; // Chuyển đến section mới
+        }
+    
+        // Theo dõi thời gian idle của người dùng
+        setInterval(function() {
+            idleTime++;
+            if (idleTime > 2) { // Nếu không thao tác trong 2 giây
+                goToNextSection(); // Chuyển sang section tiếp theo
+            }
+        }, 1000); // Kiểm tra mỗi giây
+    
+        // Thêm sự kiện để reset thời gian idle khi người dùng tương tác
+        document.addEventListener('mousemove', resetIdleTime);
+        document.addEventListener('keypress', resetIdleTime);
+        document.addEventListener('scroll', resetIdleTime);
+    </script>
+    
+
+    
+</body>
+
+</html>

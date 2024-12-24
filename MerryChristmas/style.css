@@ -1,0 +1,237 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset margin, padding và thiết lập font chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Thiết lập nền và kiểu cho body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover; /* Đảm bảo nền phủ toàn bộ màn hình */
+    background-position: center; /* Giữ vị trí trung tâm cho hình nền */
+}
+
+/* Thêm hiệu ứng cuộn mượt mà cho toàn bộ trang */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Thanh điều hướng */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px; /* Điều chỉnh padding cho thanh điều hướng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navigation a {
+    position: relative;
+    color: #fff;
+    font-size: 1em; /* Điều chỉnh kích thước chữ */
+    margin: 0 7px;
+    text-decoration: none;
+    padding: 6px 20px;
+}
+
+.navigation a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    transform: scale(0);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navigation a:hover span {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Phần nội dung chữ */
+.text h1 {
+    font-size: 7em; /* Điều chỉnh kích thước chữ để phù hợp với màn hình nhỏ */
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    background: url('back-text.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: backText 20s linear infinite alternate;
+}
+
+/* Keyframe cho hiệu ứng chữ */
+@keyframes backText {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+/* Thiết lập các section */
+section {
+    width: 100%;
+    padding: 60px 20px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Section "Trang Chủ" */
+#home {
+    background: url('home-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center; /* Đảm bảo hình nền luôn nằm ở vị trí trung tâm */
+}
+
+/* Section "Lời Chúc" */
+#wish {
+    background: url('wish-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center; /* Đảm bảo hình nền luôn nằm ở vị trí trung tâm */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Lớp phủ mờ cho phần Lời Chúc */
+#wish::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.256);
+    z-index: -1;
+}
+
+/* Phần nội dung Lời Chúc */
+.message h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    -webkit-text-stroke: 0.5px #fff;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Hiệu ứng fade-in cho Lời Chúc */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries cho thiết bị di động */
+@media (max-width: 768px) {
+    /* Điều chỉnh thanh điều hướng cho màn hình nhỏ */
+    header {
+        padding: 20px 20px;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+    }
+
+    /* Giảm kích thước chữ cho phần nội dung */
+    .text h1 {
+        font-size: 5em;
+    }
+
+    /* Điều chỉnh kích thước chữ trong phần Lời Chúc */
+    .message h2 {
+        font-size: 1.3em;
+    }
+
+    /* Điều chỉnh padding cho phần Lời Chúc */
+    #wish {
+        padding: 40px 20px;
+    }
+
+    /* Thay đổi hình nền cho thiết bị di động */
+    #home {
+        background: url('background2.jpg') no-repeat center center fixed;
+        background-size: contain;
+        background-position: center;
+    }
+
+    #wish {
+        background: url('background2.jpg') no-repeat center center fixed;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+/* Media Queries cho màn hình rất nhỏ (smartphone) */
+@media (max-width: 480px) {
+    /* Điều chỉnh thanh điều hướng cho màn hình nhỏ hơn */
+    header {
+        padding: 10px 15px;
+    }
+
+    .navigation a {
+        font-size: 0.8em;
+    }
+
+    /* Giảm kích thước chữ cho phần nội dung */
+    .text h1 {
+        font-size: 4.5em;
+    }
+
+    /* Điều chỉnh kích thước chữ trong phần Lời Chúc */
+    .message h2 {
+        font-size: 1em;
+    }
+
+    /* Điều chỉnh padding cho phần Lời Chúc */
+    #wish {
+        padding: 30px 15px;
+    }
+
+    /* Thay đổi hình nền cho màn hình rất nhỏ */
+    #home {
+        background: url('background2.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    #wish {
+        background: url('background2.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
